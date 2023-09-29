@@ -21,4 +21,12 @@ public class HomeController {
 		
 		return model;
 	}
+	@RequestMapping(value="/user", method = RequestMethod.GET)
+	public ModelAndView visitUser() {
+		ModelAndView model = new ModelAndView("user");
+		model.addObject("title", "user Control Panel");
+		model.addObject("message", "This page demonstrates how to use Spring security.");
+
+		return model;
+	}
 }
